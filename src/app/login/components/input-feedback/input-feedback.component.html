@@ -1,0 +1,5 @@
+<input [id]="id" class="form-control" [formControl]="input" [type]="type">
+<div class="invalid-control" *ngFor="let validator of validatorsMessages">
+  <div *ngIf="input.hasError(validator.type) && input.touched">
+       {{validator.message}}</div>
+</div>

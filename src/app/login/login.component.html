@@ -1,0 +1,18 @@
+<div class="login-content">
+  <form class="form-login" [formGroup]="loginForm" (submit)="login()">
+    <div class="form-group">
+      <label class="label-text" for="input-email">Email: </label>
+      <app-input-feedback [id]="'input-email'" [input]="loginForm.controls.email" [validatorsMessages]="validatorsMessages.email" [type]="'text'"></app-input-feedback>
+    </div>
+
+    <div class="form-group">
+      <label class="label-text" for="input-password">Password: </label>
+      <input id="input-password" class="form-control" formControlName="password" type="password">
+      <div class="invalid-control" *ngFor="let validator of validatorsMessages.password">
+        <div *ngIf="loginForm.controls.password.hasError(validator.type) && loginForm.controls.password.touched"> {{validator.message}}</div>
+      </div>
+    </div>
+
+</form>
+<button (click)="logar()" class="btn btn-primary">Logar</button>
+</div>
