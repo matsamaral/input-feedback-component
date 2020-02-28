@@ -1,0 +1,19 @@
+.login-content, .login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-content, .login-form {
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    width: 600px;
+    height: 600px;
+}
+  
+.login-content {
+    width: 100%;
+    height: 100%;
+}
