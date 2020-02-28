@@ -1,0 +1,20 @@
+.form-control {
+    border-color: map-get($map: $gray-scale, $key: gray-40);
+    &:focus {
+      border-color: map-get($map: $status, $key: process);
+    }
+    &.ng-invalid.ng-touched {
+      border-color: map-get($map: $status, $key: error);
+    }
+    &.ng-valid.ng-touched {
+      border-color: map-get($map: $status, $key: done);
+    }
+  }
+  
+  input {
+    width: 300px;
+  }
+  
+  .invalid-control {
+      color: map-get($map: $status, $key: error);
+  }

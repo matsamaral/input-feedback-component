@@ -1,0 +1,9 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
